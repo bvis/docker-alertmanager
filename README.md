@@ -10,6 +10,6 @@ Both can be passed to the container as an environmental variable. For example:
     docker run \
       -e "SLACK_API=https://hooks.slack.com/services/MY/API/KEY" \
       -e "LOGSTASH_URL=http://logstash:8080/" \
-      alertmanager
+      basi/alertmanager
       
       
