@@ -1,4 +1,4 @@
-FROM prom/alertmanager:v0.4.2
+FROM prom/alertmanager:v0.6.2
 
 ENV "ALERTMANAGER_BIN=/bin/alertmanager" \
     "SLACK_API=null" \
