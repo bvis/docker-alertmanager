@@ -15,9 +15,9 @@ receivers:
     slack_configs:
       - send_resolved: true
         #api_url: 'null'#
-        username: 'Prometheus - Alerts'
+        username: 'Prometheus Alerts'
         channel: '#alert-notifications'
-        text: '{{ .CommonAnnotations.summary }} ---> {{ .CommonAnnotations.description }}'
+        text: '{{ .CommonAnnotations.summary }} {{ .CommonAnnotations.description }}'
         icon_emoji: ':dart:'
   - name: 'logstash'
     webhook_configs:
