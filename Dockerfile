@@ -1,10 +1,10 @@
-FROM prom/alertmanager:v0.8.0
+FROM prom/alertmanager:v0.9.1
 
-ARG "version=0.1.0-dev"
-ARG "build_date=unknown"
-ARG "commit_hash=unknown"
-ARG "vcs_url=unknown"
-ARG "vcs_branch=unknown"
+ARG version="0.1.0-dev"
+ARG build_date="unknown"
+ARG commit_hash="unknown"
+ARG vcs_url="unknown"
+ARG vcs_branch="unknown"
 
 LABEL org.label-schema.vendor="Softonic" \
     org.label-schema.name="alertmanager" \
@@ -21,9 +21,9 @@ LABEL org.label-schema.vendor="Softonic" \
 LOGSTASH_URL=Logstash URL to send the alerts" \
     org.label-schema.build-date=$build_date
 
-ENV "ALERTMANAGER_BIN=/bin/alertmanager" \
-    "SLACK_API=null" \
-    "LOGSTASH_URL=http://logstash:8080/"
+ENV ALERTMANAGER_BIN="/bin/alertmanager" \
+    SLACK_API="null" \
+    LOGSTASH_URL="http://logstash:8080/"
 
 COPY rootfs /
 
