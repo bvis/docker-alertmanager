@@ -1,4 +1,4 @@
-FROM prom/alertmanager:v0.9.1
+FROM prom/alertmanager:v0.12.0
 
 ARG version="0.1.0-dev"
 ARG build_date="unknown"
