@@ -16,9 +16,10 @@ receivers:
       - send_resolved: true
         #api_url: 'null'#
         username: 'Prometheus Alerts'
+        #title_link: 'null'#
         channel: '#alert-notifications'
         text: '{{ .CommonAnnotations.summary }} {{ .CommonAnnotations.description }}'
-        icon_emoji: ':dart:'
+        icon_emoji: '{{ if eq .Status "firing" }}:warning:{{ else }}:white_check_mark:{{ end }}'
   - name: 'logstash'
     webhook_configs:
       # Whether or not to notify about resolved alerts.
